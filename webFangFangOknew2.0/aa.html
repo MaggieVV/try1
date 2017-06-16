@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qrcode</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".module span.flag").hover(function() {
+                $("#qrcode").fadeIn(50);
+            }, function() {
+                $("#qrcode").fadeOut(50);
+            });
+        });
+    </script>
+    <style>
+        /*突出显示气泡二维码*/
+        body {
+            background-color: #533C3C;
+        }
+
+        .module {
+            top:20px;
+            left: 200px;
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        /*二维码标记*/
+        .module .flag {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            cursor: pointer;
+            width: 80px;
+            height: 80px;
+            background-image: url("img/muji.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        #qrcode {
+            width: 100px;
+            height: 100px;
+            border: 3px solid #f6f6f6;
+            box-shadow:2px 2px 4px rgba(0,0,0,.5);
+            position: absolute;
+            top: 41%;
+            left: 47%;
+            display: none;
+        }
+
+        #qrcode img {
+            width: 100px;
+            height: 100px;
+        }
+
+        /*两个三角形成尖角*/
+        /*#qrcode:after {*/
+            /*border: 14px solid transparent;*/
+            /*border-right: 14px solid #fff;*/
+            /*width: 0;*/
+            /*height: 0;*/
+            /*position: absolute;*/
+            /*content: ' ';*/
+            /*right: 100%;*/
+            /*top: 8%;*/
+        /*}*/
+
+        /*#qrcode:before {*/
+            /*border: 15px solid transparent;*/
+            /*border-right: 15px solid #f6f6f6;*/
+            /*width: 0;*/
+            /*height: 0;*/
+            /*position: absolute;*/
+            /*content: ' ';*/
+            /*right: 103%;*/
+            /*top: 7%;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div class="module">
+        <span class="flag"></span>
+        <div id="qrcode">
+            <img src="img/coach.jpg" />
+        </div>
+    </div>
+</body>
+
+</html>
